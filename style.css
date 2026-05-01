@@ -55,10 +55,10 @@ h1 {
 }
 
 /* Category colors matching the map */
-.dot.community { background: #5c6bc0; }
-.dot.park { background: #43a047; }
-.dot.reserve { background: #fb8c00; }
-.dot.sanctuary { background: #e53935; }
+.dot.community { background: #F9F871; }
+.dot.park { background: #73CF99; }
+.dot.reserve { background: #539498; }
+.dot.sanctuary { background: #F79334; }
 
 /* Map fills remaining screen */
 #map {
