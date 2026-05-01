@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Sky Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+</head>
+<body>
+
+  <!-- Page header with title, description, and call to action -->
+  <div class="header">
+    <h1>🌌 Dark Sky Explorer</h1>
+    <p class="subtitle">Explore certified International Dark Sky Places across the United States</p>
+    <p class="cta">👆 Click on a marker to learn about each location</p>
+    <!-- Legend showing color categories -->
+    <div class="legend">
+      <span class="dot community"></span> Community
+      <span class="dot park"></span> Park
+      <span class="dot reserve"></span> Reserve
+      <span class="dot sanctuary"></span> Sanctuary
+    </div>
+  </div>
+
+  <!-- Map container -->
+  <div id="map"></div>
+
+  <!-- Load JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
