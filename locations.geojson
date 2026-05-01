@@ -11,7 +11,13 @@
         "description": "Famous for its red rock scenery, Sedona was one of the first designated Dark Sky Communities in the US.",
         "url": "https://darksky.org/places/sedona-arizona-dark-sky-community/"
       },
-      "geometry": { "type": "Point", "coordinates": [-111.7603, 34.8697] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.7603,
+          34.8697
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -23,7 +29,13 @@
         "description": "The world's first International Dark Sky City, home to Lowell Observatory.",
         "url": "https://darksky.org/places/flagstaff-arizona-dark-sky-community/"
       },
-      "geometry": { "type": "Point", "coordinates": [-111.6513, 35.1983] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.6513,
+          35.1983
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -35,7 +47,13 @@
         "description": "Nestled within Indiana Dunes National Park on the southern shore of Lake Michigan.",
         "url": "https://darksky.org/places/beverly-shores-indiana-dark-sky-community/"
       },
-      "geometry": { "type": "Point", "coordinates": [-86.9956, 41.6931] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.9956,
+          41.6931
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -47,7 +65,121 @@
         "description": "A rural community in the Roaring Fork Valley surrounded by the Elk Mountains.",
         "url": "https://darksky.org/places/old-snowmass-colorado/"
       },
-      "geometry": { "type": "Point", "coordinates": [-107.0117, 39.2319] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.0117,
+          39.2319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Westcliffe & Silver Cliff",
+        "state": "Colorado",
+        "category": "Dark Sky Community",
+        "designated": 2014,
+        "description": "Two of the highest-altitude International Dark Sky Communities in the world, at over 7,800 feet.",
+        "url": "https://darksky.org/places/westcliffe-silver-cliff-colorado-dark-sky-community/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.4644,
+          38.1333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fountain Hills",
+        "state": "Arizona",
+        "category": "Dark Sky Community",
+        "designated": 2018,
+        "description": "A suburban community near Phoenix committed to responsible lighting practices.",
+        "url": "https://darksky.org/places/fountain-hills-arizona-dark-sky-community/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.7179,
+          33.6119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Homer",
+        "state": "Alaska",
+        "category": "Dark Sky Community",
+        "designated": 2022,
+        "description": "A coastal community on the Kenai Peninsula known for stunning views of Kachemak Bay and dark winter skies.",
+        "url": "https://darksky.org/places/homer-alaska-dark-sky-community/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -151.5483,
+          59.6425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dripping Springs",
+        "state": "Texas",
+        "category": "Dark Sky Community",
+        "designated": 2014,
+        "description": "The first Dark Sky Community in Texas, located in the Texas Hill Country west of Austin.",
+        "url": "https://darksky.org/places/dripping-springs-texas-dark-sky-community/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.0864,
+          30.1905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Horseshoe Bay",
+        "state": "Texas",
+        "category": "Dark Sky Community",
+        "designated": 2014,
+        "description": "A lakeside resort community on Lake LBJ in the Texas Hill Country.",
+        "url": "https://darksky.org/places/horseshoe-bay-texas-dark-sky-community/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.362,
+          30.5418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Breckenridge",
+        "state": "Colorado",
+        "category": "Dark Sky Community",
+        "designated": 2022,
+        "description": "The first resort town in Colorado to earn Dark Sky Community certification.",
+        "url": "https://darksky.org/places/breckenridge-colorado-dark-sky-community/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.0384,
+          39.4817
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -59,7 +191,13 @@
         "description": "One of the least light-polluted places in the lower 48 states, offering stunning Milky Way views.",
         "url": "https://darksky.org/places/big-bend-national-park-dark-sky-park/"
       },
-      "geometry": { "type": "Point", "coordinates": [-103.2421, 29.1275] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.2421,
+          29.1275
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -71,7 +209,13 @@
         "description": "Known for its dramatic red rock landscape and over 2,000 natural stone arches.",
         "url": "https://darksky.org/places/arches-national-park-dark-sky-park/"
       },
-      "geometry": { "type": "Point", "coordinates": [-109.5925, 38.7331] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.5925,
+          38.7331
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -83,19 +227,193 @@
         "description": "The largest dark sky park in the US, offering some of the darkest skies in North America.",
         "url": "https://darksky.org/places/death-valley-national-park-dark-sky-park/"
       },
-      "geometry": { "type": "Point", "coordinates": [-116.9325, 36.5054] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.9325,
+          36.5054
+        ]
+      }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Glacier National Park",
+        "name": "Waterton-Glacier International Peace Park",
         "state": "Montana",
         "category": "Dark Sky Park",
         "designated": 2017,
-        "description": "A stunning wilderness area offering incredible views of the Milky Way over glacial lakes.",
+        "description": "The world's first transboundary International Dark Sky Park, spanning the US-Canada border.",
         "url": "https://darksky.org/places/waterton-glacier-international-peace-park-dark-sky-park/"
       },
-      "geometry": { "type": "Point", "coordinates": [-113.7870, 48.7596] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.787,
+          48.7596
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Canyon National Park",
+        "state": "Arizona",
+        "category": "Dark Sky Park",
+        "designated": 2019,
+        "description": "One of the most iconic landscapes in the world, offering breathtaking stargazing above ancient rock formations.",
+        "url": "https://darksky.org/places/grand-canyon-national-park-dark-sky-park/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.1129,
+          36.1069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bryce Canyon National Park",
+        "state": "Utah",
+        "category": "Dark Sky Park",
+        "designated": 2019,
+        "description": "Known for its unique geology of horseshoe-shaped amphitheaters and stunning hoodoo formations under dark skies.",
+        "url": "https://darksky.org/places/bryce-canyon-national-park-dark-sky-park/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.1871,
+          37.593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Capitol Reef National Park",
+        "state": "Utah",
+        "category": "Dark Sky Park",
+        "designated": 2015,
+        "description": "A hidden gem among Utah national parks, offering dark skies above colorful cliffs and canyons.",
+        "url": "https://darksky.org/places/capitol-reef-national-park-dark-sky-park/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.2615,
+          38.367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Canyonlands National Park",
+        "state": "Utah",
+        "category": "Dark Sky Park",
+        "designated": 2015,
+        "description": "Utah's largest national park, featuring dramatic canyons, mesas, and some of the darkest skies in the country.",
+        "url": "https://darksky.org/places/canyonlands-national-park-dark-sky-park/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.93,
+          38.2
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Natural Bridges National Monument",
+        "state": "Utah",
+        "category": "Dark Sky Park",
+        "designated": 2007,
+        "description": "The world's first International Dark Sky Park, designated in 2007. Features three ancient natural bridges.",
+        "url": "https://darksky.org/places/natural-bridges-national-monument-dark-sky-park/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.01,
+          37.6011
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Joshua Tree National Park",
+        "state": "California",
+        "category": "Dark Sky Park",
+        "designated": 2017,
+        "description": "Located where the Mojave and Sonoran deserts meet, Joshua Tree offers remarkable stargazing and iconic desert landscapes.",
+        "url": "https://darksky.org/places/joshua-tree-national-park-dark-sky-park/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.901,
+          33.8734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Black Canyon of the Gunnison",
+        "state": "Colorado",
+        "category": "Dark Sky Park",
+        "designated": 2015,
+        "description": "A dramatic canyon carved by the Gunnison River, offering dark skies above ancient Precambrian rock.",
+        "url": "https://darksky.org/places/black-canyon-of-the-gunnison-national-park-dark-sky-park/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.7416,
+          38.5754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cherry Springs State Park",
+        "state": "Pennsylvania",
+        "category": "Dark Sky Park",
+        "designated": 2008,
+        "description": "One of the darkest places in the eastern US, located on a high plateau in north-central Pennsylvania.",
+        "url": "https://darksky.org/places/cherry-springs-state-park-dark-sky-park/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.8256,
+          41.6631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chaco Culture National Historical Park",
+        "state": "New Mexico",
+        "category": "Dark Sky Park",
+        "designated": 2013,
+        "description": "An ancient cultural site with some of the darkest skies in the Southwest, honoring the astronomical knowledge of ancestral Puebloans.",
+        "url": "https://darksky.org/places/chaco-culture-national-historical-park-dark-sky-park/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.9617,
+          36.0608
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -104,10 +422,16 @@
         "state": "Texas",
         "category": "Dark Sky Reserve",
         "designated": 2015,
-        "description": "The largest International Dark Sky Reserve in the world, covering over 54,000 km².",
+        "description": "The largest International Dark Sky Reserve in the world, covering over 9 million acres.",
         "url": "https://darksky.org/places/greater-big-bend-international-dark-sky-reserve/"
       },
-      "geometry": { "type": "Point", "coordinates": [-103.5000, 29.5000] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.5,
+          29.5
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -119,7 +443,13 @@
         "description": "The first Dark Sky Reserve in the US, covering 1,416 square miles of protected dark skies.",
         "url": "https://darksky.org/places/central-idaho-dark-sky-reserve/"
       },
-      "geometry": { "type": "Point", "coordinates": [-114.9000, 44.5000] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.9,
+          44.5
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -128,10 +458,16 @@
         "state": "New Mexico",
         "category": "Dark Sky Sanctuary",
         "designated": 2014,
-        "description": "The first International Dark Sky Sanctuary in the Northern Hemisphere.",
+        "description": "The first International Dark Sky Sanctuary in the Northern Hemisphere, located in the Gila National Forest.",
         "url": "https://darksky.org/places/cosmic-campground-dark-sky-place/"
       },
-      "geometry": { "type": "Point", "coordinates": [-108.7384, 33.6500] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.7384,
+          33.65
+        ]
+      }
     }
   ]
 }
