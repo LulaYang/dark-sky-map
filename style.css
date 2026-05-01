@@ -61,8 +61,8 @@ h1 {
 
 /* Category colors matching the map markers */
 .dot.community { background: #F9F871; }
-.dot.park { background: #73CF99; }
-.dot.reserve { background: #539498; }
+.dot.park { background: #00A6E1; }
+.dot.reserve { background: #A25D6B; }
 .dot.sanctuary { background: #F79334; }
 
 /* Map fills remaining screen height */
@@ -117,8 +117,8 @@ h1 {
 
 /* Category tag colors matching map markers */
 .tag-community { background: #F9F871; color: #111; }
-.tag-park { background: #73CF99; color: #111; }
-.tag-reserve { background: #539498; color: white; }
+.tag-park { background: #00A6E1; color: white; }
+.tag-reserve { background: #A25D6B; color: white; }
 .tag-sanctuary { background: #F79334; color: #111; }
 
 /* Popup description text */
@@ -127,6 +127,19 @@ h1 {
   line-height: 1.5;
   color: #333;
   margin-bottom: 4px;
+}
+
+/* Learn more link */
+.popup-body .learn-more {
+  font-size: 11px;
+  color: #00A6E1;
+  text-decoration: none;
+  display: block;
+  margin-top: 6px;
+}
+
+.popup-body .learn-more:hover {
+  text-decoration: underline;
 }
 
 /* Popup close button */
