@@ -45,7 +45,7 @@
         "category": "Dark Sky Community",
         "designated": 2023,
         "description": "A rural community in the Roaring Fork Valley surrounded by the Elk Mountains.",
-        "url": "https://darksky.org/places/old-snowmass-colorado-dark-sky-community/"
+        "url": "https://darksky.org/places/old-snowmass-colorado/"
       },
       "geometry": { "type": "Point", "coordinates": [-107.0117, 39.2319] }
     },
@@ -93,7 +93,7 @@
         "category": "Dark Sky Park",
         "designated": 2017,
         "description": "A stunning wilderness area offering incredible views of the Milky Way over glacial lakes.",
-        "url": "https://darksky.org/places/glacier-national-park-dark-sky-park/"
+        "url": "https://darksky.org/places/waterton-glacier-international-peace-park-dark-sky-park/"
       },
       "geometry": { "type": "Point", "coordinates": [-113.7870, 48.7596] }
     },
