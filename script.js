@@ -62,7 +62,7 @@ map.on('load', () => {
         <span class="category-tag ${tagClass}">${props.category}</span>
         <p>${props.description}</p>
         <p><strong>Designated:</strong> ${props.designated}</p>
-        <a href="https://darksky.org/places/" target="_blank" class="learn-more">Learn more about dark sky certification →</a>
+        <a href="${props.url}" target="_blank" class="learn-more">Learn more →</a>
       </div>
     `;
 
