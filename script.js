@@ -1,7 +1,7 @@
 // Mapbox access token
 mapboxgl.accessToken = 'pk.eyJ1IjoibHVsYXlhbmciLCJhIjoiY21oZHAzMTYwMDVkZjJ2cHZyaHh6N3E5ayJ9.1DHnr-Iov8QBokd0I6pYTA';
 
-// Initialize the map
+// Initialize the map centered on the US
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/navigation-night-v1',
@@ -9,15 +9,7 @@ const map = new mapboxgl.Map({
   zoom: 3.5
 });
 
-// Color mapping for each category
-const categoryColors = {
-  'Dark Sky Community': '#5c6bc0',
-  'Dark Sky Park': '#43a047',
-  'Dark Sky Reserve': '#fb8c00',
-  'Dark Sky Sanctuary': '#e53935'
-};
-
-// CSS class mapping for popup tags
+// CSS class mapping for popup category tags
 const categoryClasses = {
   'Dark Sky Community': 'tag-community',
   'Dark Sky Park': 'tag-park',
@@ -25,7 +17,7 @@ const categoryClasses = {
   'Dark Sky Sanctuary': 'tag-sanctuary'
 };
 
-// Load GeoJSON data and add to map
+// Load GeoJSON data and add layers to the map
 map.on('load', () => {
 
   // Add GeoJSON file as a data source
@@ -34,27 +26,26 @@ map.on('load', () => {
     data: 'locations.geojson'
   });
 
-  // Add a circle layer with data-driven color styling
+  // Add circle layer with data-driven color based on category
   map.addLayer({
     id: 'dark-sky-circles',
     type: 'circle',
     source: 'dark-sky-places',
     paint: {
-      // Color circles based on category
+      // Color each circle based on its category property
       'circle-color': [
         'match',
         ['get', 'category'],
         'Dark Sky Community', '#F9F871',
-        'Dark Sky Park', '#73CF99',
-        'Dark Sky Reserve', '#539498',
+        'Dark Sky Park', '#00A6E1',
+        'Dark Sky Reserve', '#A25D6B',
         'Dark Sky Sanctuary', '#F79334',
         '#ffffff'
       ],
-      'circle-radius': 9,
+      'circle-radius': 10,
       'circle-stroke-width': 2,
       'circle-stroke-color': '#ffffff',
-      // Glow effect
-      'circle-opacity': 0.9
+      'circle-opacity': 1
     }
   });
 
@@ -64,17 +55,18 @@ map.on('load', () => {
     const coords = e.features[0].geometry.coordinates;
     const tagClass = categoryClasses[props.category] || 'tag-community';
 
-    // Build popup HTML
+    // Build popup HTML content
     const html = `
       <div class="popup-body">
         <h3>${props.name}, ${props.state}</h3>
         <span class="category-tag ${tagClass}">${props.category}</span>
         <p>${props.description}</p>
         <p><strong>Designated:</strong> ${props.designated}</p>
+        <a href="https://darksky.org/places/" target="_blank" class="learn-more">Learn more about dark sky certification →</a>
       </div>
     `;
 
-    // Display popup at clicked location
+    // Display popup at the clicked location
     new mapboxgl.Popup({ offset: 10, maxWidth: '240px' })
       .setLngLat(coords)
       .setHTML(html)
@@ -92,5 +84,5 @@ map.on('load', () => {
   });
 });
 
-// Add navigation controls
+// Add navigation controls to top right
 map.addControl(new mapboxgl.NavigationControl(), 'top-right');
