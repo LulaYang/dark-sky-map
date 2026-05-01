@@ -1,0 +1,137 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sedona",
+        "state": "Arizona",
+        "category": "Dark Sky Community",
+        "designated": 2014,
+        "description": "Famous for its red rock scenery, Sedona was one of the first designated Dark Sky Communities in the US."
+      },
+      "geometry": { "type": "Point", "coordinates": [-111.7603, 34.8697] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Flagstaff",
+        "state": "Arizona",
+        "category": "Dark Sky Community",
+        "designated": 2001,
+        "description": "The world's first International Dark Sky City, home to Lowell Observatory."
+      },
+      "geometry": { "type": "Point", "coordinates": [-111.6513, 35.1983] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beverly Shores",
+        "state": "Indiana",
+        "category": "Dark Sky Community",
+        "designated": 2021,
+        "description": "Nestled within Indiana Dunes National Park on the southern shore of Lake Michigan."
+      },
+      "geometry": { "type": "Point", "coordinates": [-86.9956, 41.6931] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Old Snowmass",
+        "state": "Colorado",
+        "category": "Dark Sky Community",
+        "designated": 2023,
+        "description": "A rural community in the Roaring Fork Valley surrounded by the Elk Mountains."
+      },
+      "geometry": { "type": "Point", "coordinates": [-107.0117, 39.2319] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Big Bend National Park",
+        "state": "Texas",
+        "category": "Dark Sky Park",
+        "designated": 2012,
+        "description": "One of the least light-polluted places in the lower 48 states, offering stunning Milky Way views."
+      },
+      "geometry": { "type": "Point", "coordinates": [-103.2421, 29.1275] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arches National Park",
+        "state": "Utah",
+        "category": "Dark Sky Park",
+        "designated": 2019,
+        "description": "Known for its dramatic red rock landscape and over 2,000 natural stone arches."
+      },
+      "geometry": { "type": "Point", "coordinates": [-109.5925, 38.7331] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Death Valley National Park",
+        "state": "California",
+        "category": "Dark Sky Park",
+        "designated": 2013,
+        "description": "The largest dark sky park in the US, offering some of the darkest skies in North America."
+      },
+      "geometry": { "type": "Point", "coordinates": [-116.9325, 36.5054] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Glacier National Park",
+        "state": "Montana",
+        "category": "Dark Sky Park",
+        "designated": 2017,
+        "description": "A stunning wilderness area offering incredible views of the Milky Way over glacial lakes."
+      },
+      "geometry": { "type": "Point", "coordinates": [-113.7870, 48.7596] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Greater Big Bend",
+        "state": "Texas",
+        "category": "Dark Sky Reserve",
+        "designated": 2015,
+        "description": "The largest International Dark Sky Reserve in the world, covering over 54,000 km²."
+      },
+      "geometry": { "type": "Point", "coordinates": [-103.5000, 29.5000] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Central Idaho",
+        "state": "Idaho",
+        "category": "Dark Sky Reserve",
+        "designated": 2017,
+        "description": "The first Dark Sky Reserve in the US, covering 1,416 square miles of protected dark skies."
+      },
+      "geometry": { "type": "Point", "coordinates": [-114.9000, 44.5000] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cosmic Campground",
+        "state": "New Mexico",
+        "category": "Dark Sky Sanctuary",
+        "designated": 2014,
+        "description": "The first International Dark Sky Sanctuary in the Northern Hemisphere."
+      },
+      "geometry": { "type": "Point", "coordinates": [-108.7384, 33.6500] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Astronomy Village",
+        "state": "Virginia",
+        "category": "Dark Sky Sanctuary",
+        "designated": 2016,
+        "description": "A private community dedicated to astronomy and dark sky preservation in the Blue Ridge Mountains."
+      },
+      "geometry": { "type": "Point", "coordinates": [-79.5400, 38.2300] }
+    }
+  ]
+}
