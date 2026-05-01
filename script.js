@@ -44,10 +44,10 @@ map.on('load', () => {
       'circle-color': [
         'match',
         ['get', 'category'],
-        'Dark Sky Community', '#5c6bc0',
-        'Dark Sky Park', '#43a047',
-        'Dark Sky Reserve', '#fb8c00',
-        'Dark Sky Sanctuary', '#e53935',
+        'Dark Sky Community', '#F9F871',
+        'Dark Sky Park', '#73CF99',
+        'Dark Sky Reserve', '#539498',
+        'Dark Sky Sanctuary', '#F79334',
         '#ffffff'
       ],
       'circle-radius': 9,
