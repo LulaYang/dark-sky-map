@@ -129,21 +129,9 @@
         "category": "Dark Sky Sanctuary",
         "designated": 2014,
         "description": "The first International Dark Sky Sanctuary in the Northern Hemisphere.",
-        "url": "https://darksky.org/places/cosmic-campground-dark-sky-sanctuary/"
+        "url": "https://darksky.org/places/cosmic-campground-dark-sky-place/"
       },
       "geometry": { "type": "Point", "coordinates": [-108.7384, 33.6500] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Astronomy Village",
-        "state": "Virginia",
-        "category": "Dark Sky Sanctuary",
-        "designated": 2016,
-        "description": "A private community dedicated to astronomy and dark sky preservation in the Blue Ridge Mountains.",
-        "url": "https://darksky.org/places/astronomy-village-dark-sky-sanctuary/"
-      },
-      "geometry": { "type": "Point", "coordinates": [-79.5400, 38.2300] }
     }
   ]
 }
