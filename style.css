@@ -19,18 +19,21 @@ body {
   background: #0b0f1a;
 }
 
+/* Page title */
 h1 {
   font-size: 32px;
   margin-bottom: 6px;
   color: #F9F871;
 }
 
+/* Subtitle text */
 .subtitle {
   font-size: 14px;
   color: #a0a8c0;
   margin-bottom: 4px;
 }
 
+/* Call to action text */
 .cta {
   font-size: 13px;
   color: #73CF99;
@@ -47,6 +50,7 @@ h1 {
   color: #a0a8c0;
 }
 
+/* Legend dot base style */
 .dot {
   display: inline-block;
   width: 12px;
@@ -55,13 +59,13 @@ h1 {
   margin-right: 4px;
 }
 
-/* Category colors matching the map */
+/* Category colors matching the map markers */
 .dot.community { background: #F9F871; }
 .dot.park { background: #73CF99; }
 .dot.reserve { background: #539498; }
 .dot.sanctuary { background: #F79334; }
 
-/* Map fills remaining screen */
+/* Map fills remaining screen height */
 #map {
   width: 100%;
   height: calc(100vh - 130px);
@@ -72,11 +76,12 @@ h1 {
   display: none !important;
 }
 
+/* Make popup background transparent */
 .mapboxgl-popup {
   background: transparent !important;
 }
 
-/* Popup styling */
+/* Popup container styling */
 .mapboxgl-popup-content {
   background: white !important;
   color: #111 !important;
@@ -88,11 +93,12 @@ h1 {
   border: none !important;
 }
 
-/* Popup body text */
+/* Popup body padding */
 .popup-body {
   padding: 12px 14px;
 }
 
+/* Popup location title */
 .popup-body h3 {
   font-size: 14px;
   font-weight: bold;
@@ -100,21 +106,22 @@ h1 {
   margin-bottom: 4px;
 }
 
+/* Category tag badge */
 .popup-body .category-tag {
   font-size: 11px;
-  color: white;
   padding: 2px 8px;
   border-radius: 10px;
   display: inline-block;
   margin-bottom: 8px;
 }
 
-/* Category tag colors */
-.tag-community { background: #5c6bc0; }
-.tag-park { background: #43a047; }
-.tag-reserve { background: #fb8c00; }
-.tag-sanctuary { background: #e53935; }
+/* Category tag colors matching map markers */
+.tag-community { background: #F9F871; color: #111; }
+.tag-park { background: #73CF99; color: #111; }
+.tag-reserve { background: #539498; color: white; }
+.tag-sanctuary { background: #F79334; color: #111; }
 
+/* Popup description text */
 .popup-body p {
   font-size: 12px;
   line-height: 1.5;
@@ -122,7 +129,7 @@ h1 {
   margin-bottom: 4px;
 }
 
-/* Close button */
+/* Popup close button */
 .mapboxgl-popup-close-button {
   color: #333 !important;
   font-size: 16px !important;
