@@ -1,0 +1,128 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Dark background for the whole page */
+body {
+  background: #0b0f1a;
+  font-family: Georgia, serif;
+  color: white;
+}
+
+/* Header section */
+.header {
+  text-align: center;
+  padding: 20px 20px 12px;
+  background: #0b0f1a;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #a0a8c0;
+  margin-bottom: 4px;
+}
+
+.cta {
+  font-size: 13px;
+  color: #7986cb;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+/* Legend for category colors */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 12px;
+  color: #a0a8c0;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+/* Category colors matching the map */
+.dot.community { background: #5c6bc0; }
+.dot.park { background: #43a047; }
+.dot.reserve { background: #fb8c00; }
+.dot.sanctuary { background: #e53935; }
+
+/* Map fills remaining screen */
+#map {
+  width: 100%;
+  height: calc(100vh - 130px);
+}
+
+/* Hide mapbox popup arrow */
+.mapboxgl-popup-tip {
+  display: none !important;
+}
+
+.mapboxgl-popup {
+  background: transparent !important;
+}
+
+/* Popup styling */
+.mapboxgl-popup-content {
+  background: white !important;
+  color: #111 !important;
+  border-radius: 12px !important;
+  padding: 0 !important;
+  width: 240px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4) !important;
+  border: none !important;
+}
+
+/* Popup body text */
+.popup-body {
+  padding: 12px 14px;
+}
+
+.popup-body h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.popup-body .category-tag {
+  font-size: 11px;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+/* Category tag colors */
+.tag-community { background: #5c6bc0; }
+.tag-park { background: #43a047; }
+.tag-reserve { background: #fb8c00; }
+.tag-sanctuary { background: #e53935; }
+
+.popup-body p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+/* Close button */
+.mapboxgl-popup-close-button {
+  color: #333 !important;
+  font-size: 16px !important;
+}
