@@ -1,43 +1,75 @@
-# Dark Sky Map
+# 🌌 Dark Sky Explorer
 
-An interactive web map exploring certified International Dark Sky Places across the United States.
+An interactive web map exploring certified **International Dark Sky Places** across North America. Built with Mapbox GL JS for a final project in web mapping.
 
-## What is this?
+**[🔗 Live Site](#)** · **[📁 Repository](#)**
 
-Light pollution is a growing environmental issue that prevents millions of people from seeing the night sky. DarkSky International certifies communities, parks, reserves, and sanctuaries that actively protect dark skies through responsible lighting policies and public education. This map visualizes those certified locations across the US, allowing users to explore and learn about each place.
+---
+
+## About the Project
+
+Dark Sky Explorer lets users discover locations certified by the [International Dark-Sky Association (IDA)](https://darksky.org) — places committed to reducing light pollution and preserving the natural night sky.
+
+The site features 26 certified locations across the US, spanning four designation categories: Communities, Parks, Reserves, and Sanctuaries.
+
+---
 
 ## Features
 
-- Interactive Mapbox GL JS map with a night-themed basemap
-- GeoJSON data displayed using Mapbox sources and layers
-- Data-driven color styling by certification category:
-  - **Yellow** — Dark Sky Community
-  - **Blue** — Dark Sky Park
-  - **Rose** — Dark Sky Reserve
-  - **Orange** — Dark Sky Sanctuary
-- Click any marker to view location details and a link to the official DarkSky page
-- Legend for easy category identification
+- 🌍 **Globe projection** — immersive 3D globe rendering via Mapbox GL JS
+- 🔵 **Color-coded markers** — four categories with distinct colors and glow effects
+- 🔍 **Category filters** — filter markers by designation type
+- 💬 **Interactive popups** — click any marker for description, year designated, and external link
+- 📖 **IDA info panel** — learn about the certification body and each category type
+- ✨ **Star canvas background** — animated star particles for atmosphere
+- 🔒 **Bounded navigation** — zoom and pan constrained to North America
+
+---
 
 ## Data
 
-Location data was compiled manually from [DarkSky International](https://darksky.org/places/) and stored as a GeoJSON file (`locations.geojson`). Each feature includes:
-- Name and state
-- Certification category
-- Year designated
-- Description
-- Link to the official DarkSky International page
+Location data is stored in `locations.geojson` and sourced from the [IDA's official place listings](https://darksky.org/places/). Each feature includes:
 
-## Technology
+| Field | Description |
+|---|---|
+| `name` | Location name |
+| `state` | US state |
+| `category` | IDA designation type |
+| `designated` | Year of certification |
+| `description` | Brief description |
+| `url` | Link to IDA listing |
 
-- [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/) — interactive map rendering
-- HTML, CSS, JavaScript — page structure, styling, and interactivity
-- GeoJSON — geographic data format
-- GitHub Pages — hosting and deployment
+---
 
-## Live Site
+## File Structure
 
-[https://LulaYang.github.io/dark-sky-map](https://LulaYang.github.io/dark-sky-map)
+```
+dark-sky-explorer/
+├── index.html        # Page structure and layout
+├── style.css         # All visual styling and CSS variables
+├── script.js         # Map logic, filters, popups, star animation
+├── locations.geojson # Dark sky place data (26 locations)
+└── README.md         # Project documentation
+```
 
-## Repository
+---
 
-[https://github.com/LulaYang/dark-sky-map](https://github.com/LulaYang/dark-sky-map)
+## Technologies
+
+- [Mapbox GL JS v3.3.0](https://docs.mapbox.com/mapbox-gl-js/) — map rendering and Globe projection
+- [Cormorant Garamond](https://fonts.google.com/specimen/Cormorant+Garamond) + [Space Mono](https://fonts.google.com/specimen/Space+Mono) — typography
+- Vanilla HTML / CSS / JavaScript — no frameworks
+
+---
+
+## Upgrades from Previous Version
+
+This final version addresses instructor feedback from the midterm submission:
+
+- Added **Globe projection** for a more fitting and visually striking view of North America
+- Added **zoom limits** (`minZoom: 2.5`, `maxZoom: 8`) to prevent irrelevant zoom levels
+- Added **map bounds** locked to North America (`maxBounds`)
+- Added **IDA certification info panel** explaining the certifying body and category criteria
+- Added **category filter buttons** for enhanced interactivity
+- Added **glow layer** behind markers for visual depth
+- Upgraded typography with display + monospace font pairing
