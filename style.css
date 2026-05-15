@@ -1,149 +1,387 @@
-/* Reset styles */
+/* =============================================
+   Dark Sky Explorer — style.css
+   Upgraded for final project
+   ============================================= */
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Dark background for the whole page */
-body {
-  background: #0b0f1a;
-  font-family: Georgia, serif;
-  color: white;
+/* CSS Variables for consistent theming */
+:root {
+  --color-bg: #080c18;
+  --color-header: #0b0f1eee;
+  --color-yellow: #F9F871;
+  --color-blue: #00A6E1;
+  --color-rose: #A25D6B;
+  --color-orange: #F79334;
+  --color-green: #73CF99;
+  --color-text-dim: #a0a8c0;
+  --color-text-bright: #e8eaf6;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'Space Mono', monospace;
 }
 
-/* Header section */
+/* Star canvas background */
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Dark background for the whole page */
+body {
+  background: var(--color-bg);
+  font-family: var(--font-display);
+  color: var(--color-text-bright);
+  overflow: hidden;
+}
+
+/* =============================================
+   HEADER
+   ============================================= */
 .header {
-  text-align: center;
-  padding: 20px 20px 12px;
-  background: #0b0f1a;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px 10px;
+  background: var(--color-header);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(249, 248, 113, 0.15);
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 /* Page title */
 h1 {
-  font-size: 32px;
-  margin-bottom: 6px;
-  color: #F9F871;
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-yellow);
+  letter-spacing: 0.02em;
+  line-height: 1;
 }
 
 /* Subtitle text */
 .subtitle {
-  font-size: 14px;
-  color: #a0a8c0;
-  margin-bottom: 4px;
-}
-
-/* Call to action text */
-.cta {
   font-size: 13px;
-  color: #73CF99;
+  color: var(--color-text-dim);
   font-style: italic;
-  margin-bottom: 8px;
 }
 
-/* Legend for category colors */
-.legend {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+/* Call to action */
+.cta {
   font-size: 12px;
-  color: #a0a8c0;
+  color: var(--color-green);
+  font-family: var(--font-mono);
 }
 
-/* Legend dot base style */
+/* =============================================
+   FILTER BUTTONS
+   ============================================= */
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--color-text-dim);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: var(--color-text-bright);
+}
+
+.filter-btn.active {
+  background: rgba(249, 248, 113, 0.12);
+  border-color: var(--color-yellow);
+  color: var(--color-yellow);
+}
+
+/* Legend dots inside filter buttons */
 .dot {
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  margin-right: 4px;
 }
 
-/* Category colors matching the map markers */
-.dot.community { background: #F9F871; }
-.dot.park { background: #00A6E1; }
-.dot.reserve { background: #A25D6B; }
-.dot.sanctuary { background: #F79334; }
+.dot.community, .exp-dot.community { background: var(--color-yellow); }
+.dot.park,      .exp-dot.park      { background: var(--color-blue); }
+.dot.reserve,   .exp-dot.reserve   { background: var(--color-rose); }
+.dot.sanctuary, .exp-dot.sanctuary { background: var(--color-orange); }
 
-/* Map fills remaining screen height */
+/* =============================================
+   MAP
+   ============================================= */
 #map {
+  position: relative;
+  z-index: 5;
   width: 100%;
-  height: calc(100vh - 130px);
+  height: calc(100vh - 82px);
 }
 
-/* Hide mapbox popup arrow */
+/* =============================================
+   POPUPS
+   ============================================= */
 .mapboxgl-popup-tip {
   display: none !important;
 }
 
-/* Make popup background transparent */
 .mapboxgl-popup {
   background: transparent !important;
 }
 
-/* Popup container styling */
 .mapboxgl-popup-content {
-  background: white !important;
-  color: #111 !important;
-  border-radius: 12px !important;
+  background: #111827 !important;
+  color: var(--color-text-bright) !important;
+  border-radius: 14px !important;
   padding: 0 !important;
-  width: 240px !important;
+  width: 250px !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.4) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.08) !important;
   border: none !important;
 }
 
-/* Popup body padding */
 .popup-body {
-  padding: 12px 14px;
+  padding: 14px 16px;
 }
 
-/* Popup location title */
 .popup-body h3 {
-  font-size: 14px;
-  font-weight: bold;
-  color: #111;
-  margin-bottom: 4px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin-bottom: 6px;
+  line-height: 1.3;
 }
 
-/* Category tag badge */
-.popup-body .category-tag {
-  font-size: 11px;
-  padding: 2px 8px;
+.category-tag {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  padding: 2px 9px;
   border-radius: 10px;
   display: inline-block;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
 }
 
-/* Category tag colors matching map markers */
-.tag-community { background: #F9F871; color: #111; }
-.tag-park { background: #00A6E1; color: white; }
-.tag-reserve { background: #A25D6B; color: white; }
-.tag-sanctuary { background: #F79334; color: #111; }
+.tag-community { background: var(--color-yellow); color: #111; }
+.tag-park      { background: var(--color-blue);   color: white; }
+.tag-reserve   { background: var(--color-rose);   color: white; }
+.tag-sanctuary { background: var(--color-orange); color: #111; }
 
-/* Popup description text */
 .popup-body p {
   font-size: 12px;
-  line-height: 1.5;
-  color: #333;
+  line-height: 1.6;
+  color: #8a93b0;
   margin-bottom: 4px;
 }
 
-/* Learn more link */
-.popup-body .learn-more {
+.popup-body .designated {
+  font-family: var(--font-mono);
   font-size: 11px;
-  color: #00A6E1;
-  text-decoration: none;
-  display: block;
+  color: var(--color-green);
   margin-top: 6px;
 }
 
-.popup-body .learn-more:hover {
+.learn-more {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--color-blue);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 8px;
+  transition: color 0.2s;
+}
+
+.learn-more:hover {
+  color: var(--color-yellow);
   text-decoration: underline;
 }
 
-/* Popup close button */
 .mapboxgl-popup-close-button {
-  color: #333 !important;
+  color: #555 !important;
   font-size: 16px !important;
+  padding: 6px 10px !important;
+}
+
+/* =============================================
+   IDA INFO PANEL
+   ============================================= */
+.ida-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 320px;
+  background: #0e1628;
+  color: var(--color-text-bright);
+  overflow-y: auto;
+  z-index: 999;
+  border-left: 1px solid rgba(249, 248, 113, 0.2);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -8px 0 32px rgba(0,0,0,0.5);
+}
+
+.ida-panel.hidden {
+  transform: translateX(100%);
+}
+
+.panel-content {
+  padding: 48px 24px 32px;
+}
+
+.ida-panel h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-yellow);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.panel-intro {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--color-text-dim);
+  margin-bottom: 24px;
+}
+
+.panel-intro strong {
+  color: var(--color-text-bright);
+}
+
+.category-explanation {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.exp-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.exp-dot {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.exp-item h3 {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-green);
+  margin-bottom: 4px;
+  letter-spacing: 0.05em;
+}
+
+.exp-item p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--color-text-dim);
+}
+
+.panel-footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 20px;
+}
+
+.panel-footer p {
+  font-size: 12px;
+  color: var(--color-text-dim);
+  font-style: italic;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.panel-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.panel-link:hover {
+  color: var(--color-yellow);
+  text-decoration: underline;
+}
+
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--color-text-dim);
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  color: var(--color-text-bright);
+}
+
+/* =============================================
+   OPEN PANEL BUTTON
+   ============================================= */
+.info-btn {
+  position: fixed;
+  bottom: 28px;
+  left: 24px;
+  background: rgba(14, 22, 40, 0.9);
+  color: var(--color-yellow);
+  border: 1px solid rgba(249, 248, 113, 0.4);
+  border-radius: 24px;
+  padding: 9px 18px;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+.info-btn:hover {
+  background: var(--color-yellow);
+  color: #111;
+  border-color: var(--color-yellow);
 }
