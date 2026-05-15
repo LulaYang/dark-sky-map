@@ -7,28 +7,93 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet">
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Page header with title, description, and call to action -->
+  <!-- Star particle background canvas -->
+  <canvas id="stars"></canvas>
+
+  <!-- Page header -->
   <div class="header">
-    <h1>🌌 Dark Sky Explorer</h1>
-    <p class="subtitle">Explore certified International Dark Sky Places across the United States</p>
-    <p class="cta">👆 Click on a marker to learn about each location</p>
-    <!-- Legend showing color categories -->
-    <div class="legend">
-      <span class="dot community"></span> Community
-      <span class="dot park"></span> Park
-      <span class="dot reserve"></span> Reserve
-      <span class="dot sanctuary"></span> Sanctuary
+    <div class="header-left">
+      <h1>🌌 Dark Sky Explorer</h1>
+      <p class="subtitle">Certified International Dark Sky Places across North America</p>
+      <p class="cta">👆 Click any marker to explore the location</p>
+    </div>
+    <div class="header-right">
+      <!-- Category filter buttons -->
+      <div class="filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="Dark Sky Community">
+          <span class="dot community"></span> Community
+        </button>
+        <button class="filter-btn" data-category="Dark Sky Park">
+          <span class="dot park"></span> Park
+        </button>
+        <button class="filter-btn" data-category="Dark Sky Reserve">
+          <span class="dot reserve"></span> Reserve
+        </button>
+        <button class="filter-btn" data-category="Dark Sky Sanctuary">
+          <span class="dot sanctuary"></span> Sanctuary
+        </button>
+      </div>
     </div>
   </div>
 
   <!-- Map container -->
   <div id="map"></div>
 
-  <!-- Load JavaScript -->
-  <script src="script.js"></script>
+  <!-- IDA Info Panel (hidden by default) -->
+  <div id="ida-panel" class="ida-panel hidden">
+    <button id="close-panel" class="close-btn" aria-label="Close panel">✕</button>
+    <div class="panel-content">
+      <h2>What is Dark Sky Certification?</h2>
+      <p class="panel-intro">The <strong>International Dark-Sky Association (IDA)</strong> is the world's leading authority working to protect the night sky from light pollution. Founded in 1988, IDA designates exceptional places committed to preserving darkness.</p>
 
+      <div class="category-explanation">
+        <div class="exp-item">
+          <span class="exp-dot community"></span>
+          <div>
+            <h3>Dark Sky Community</h3>
+            <p>Cities and towns that adopt responsible outdoor lighting policies to reduce light pollution and preserve dark skies for residents and wildlife.</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <span class="exp-dot park"></span>
+          <div>
+            <h3>Dark Sky Park</h3>
+            <p>Public or private lands with exceptional starry nights, committed to protecting and improving dark sky quality for science, education, and enjoyment.</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <span class="exp-dot reserve"></span>
+          <div>
+            <h3>Dark Sky Reserve</h3>
+            <p>Large regions combining a dark core zone with a surrounding buffer area, often spanning multiple land ownerships working together toward shared goals.</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <span class="exp-dot sanctuary"></span>
+          <div>
+            <h3>Dark Sky Sanctuary</h3>
+            <p>The most remote and pristine dark sky places on Earth — typically inaccessible, with minimal threat from light pollution and scientifically valuable darkness.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <p>There are over 200 certified Dark Sky Places worldwide across 22 countries.</p>
+        <a href="https://darksky.org/what-we-do/international-dark-sky-places/" target="_blank" class="panel-link">Visit IDA's official site →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button to open IDA panel -->
+  <button id="open-panel" class="info-btn" aria-label="Learn about dark sky certification">
+    🔭 About Dark Sky Certification
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
